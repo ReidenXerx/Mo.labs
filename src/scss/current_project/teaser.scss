@@ -1,75 +1,70 @@
 
 .teaser-section {
-  background: url(../img/utp.png) no-repeat;
-  background-size: cover;
-  background-position: center bottom;
-  height: 120vh;
+  min-height: 100vh;
+  position: relative;
+  margin-top: RelativeUnits(100, 0.5, desktop-middle, horizontal);
 
-  .info-container {
-    height: 100vh;
-    overflow: hidden;
-    @include SetWidth-responsive(1330);
-    ul {
-      height: 400px;
-      min-width: 300%;
+  .teaser-container {
+    @include SetWidth-responsive(1675, 0.95);
+    min-height: 90vh;
+
+    @include _tablet-middle {
+      flex-direction: column;
+      justify-content: space-around;
     }
-
-    .item {
-      @include SetWidth-responsive(1330);
-      height: 100%;
-      transition: 0.6s;
-      &:first-child {
-        //margin-left: RelativeUnits(-1330, 1, desktop-middle, horizontal);
+    .container {
+      min-width: 50%;
+      min-height: RelativeUnits(516, 0.5, desktop-middle, horizontal);
+      @include _tablet-middle {
+        min-width: 80%;
       }
     }
-
-    .info-text {
-      width: 50%;
-      h2 {
-        @include SetFontLineSize(0.33, 0.33, 0.34, 80, 16);
-        @include SetFontVars(500, 0.0, $white, none);
-        margin-bottom: RelativeUnits(50, 0.7, desktop-middle, horizontal);
-      }
-      p {
-        @include SetFontLineSize(0.2, 0.2, 0.6, 16, 16);
-        @include SetFontVars(500, 0.0, $purple, none);
-        margin-bottom: RelativeUnits(50, 0.7, desktop-middle, horizontal);
-      }
-      .utp-button {
-        font-size: 16px;
-        width: 257px;
-        height: 66px;
-        border-radius: 33px;
-        margin-left: 10px;
-      }
+    .with-image {
+      background: url(../img/screen.png) no-repeat;
+      background-size: contain;
+      background-position: center;
     }
+    .with-text {
+      padding-left: RelativeUnits(150, 0.7, desktop-middle, horizontal);
+      padding-right: RelativeUnits(100, 1, desktop-middle, horizontal);
+      ul {
+        margin-left: RelativeUnits(50, 1, desktop-middle, horizontal);
+        margin-top: RelativeUnits(19, 0.3, desktop-middle, horizontal);
+        margin-bottom: RelativeUnits(19, 0.3, desktop-middle, horizontal);
+      }
+      li {
+        @include SetFontLineSize(0.1, 0.1, 0.8, 20, 0);
+        color: $neon_green;
+        display: flex;
+        align-items: center;
+        margin-bottom: RelativeUnits(19, 0.3, desktop-middle, horizontal);
+      }
+      .square {
+        width: 7px;
+        height: 7px;
+        background: $neon_blue;
+        border-radius: 2px;
+        margin-right: RelativeUnits(19, 0.3, desktop-middle, horizontal);
+      }
 
-    .info-img {
-      width: 50%;
-      padding-left: RelativeUnits(250, 1, desktop-middle, horizontal);
-    }
-    @include _tablet-small {
-      .info-img { display: none; }
-      .info-text { width: 80vw; }
     }
   }
-
-  .carousel-nav {
-    width: 175px;
-    margin-top: -15vh;
-    .circle {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: $white;
-      cursor: pointer;
-    }
-    .green {
-      background: $green;
-    }
-    i {
-      color: $white;
-      cursor: pointer;
-    }
+  .co-de {
+    top: RelativeUnits(20, 0.5, desktop-middle, horizontal);
+    left: 0;
+  }
+  .des-ign {
+    bottom: 0;
+    right: 0;
+  }
+  .ideas {
+    position: absolute;
+    @include SetFontLineSize(0.3, 0.3, 0.4, 300, 8);
+    font-weight: 700;
+    text-transform: uppercase;
+    top: 30%;
+    left: 10%;
+    color: $t2_neon_blue;
+    z-index: 0;
   }
 }

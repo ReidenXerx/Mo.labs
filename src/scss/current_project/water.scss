@@ -1,0 +1,33 @@
+.water-section {
+  p {
+    @include SetFontLineSize(0.2, 0.2, 0.6, 22, 0);
+  }
+
+  .arrow {
+    @include SetWidth-responsive(206, 0.95);
+  }
+  .free {
+    position: relative;
+    min-height: SetWidth-responsive(136, 0.95);
+    width: 100vw;
+    margin-top: RelativeUnits(350, 1, desktop-middle, horizontal);
+    margin-bottom: RelativeUnits(550, 1, desktop-middle, horizontal);
+    h2 {
+      color: $t2_neon_blue;
+      @include SetFontLineSize(0.5, 0.5, 0.0, 190, 20);
+      text-transform: uppercase;
+      position: absolute;
+      z-index: 0;
+      font-weight: 400;
+    }
+    p {
+      margin: 0 RelativeUnits(140, 1.1, desktop-middle, horizontal);
+    }
+  }
+  .squares {
+    width: RelativeUnits(24, 0.3, desktop-middle, horizontal);
+    height: RelativeUnits(24, 0.3, desktop-middle, horizontal);
+    margin-top: RelativeUnits(70, 1, desktop-middle, horizontal);
+    margin-bottom: RelativeUnits(400, 1, desktop-middle, horizontal);
+  }
+}

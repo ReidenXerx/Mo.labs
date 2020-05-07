@@ -5,7 +5,7 @@
 @font-face {
    font-family: "Neo Sans Pro";
    src: url("../fonts/NeoSansPro-Bold.ttf");
-   font-weight: 600;
+   font-weight: 700;
   }
 @font-face {
    font-family: "Neo Sans Pro";
@@ -19,10 +19,24 @@
 @font-face {
    font-family: "Roboto";
    src: url("../fonts/Roboto-Bold.ttf");
-   font-weight: 600;
+   font-weight: 700;
   }
 @font-face {
    font-family: "Roboto";
    src: url("../fonts/Roboto-Medium.ttf");
    font-weight: 500;
   }
+@font-face {
+    font-family: "Ubuntu";
+    src: url("../fonts/Ubuntu-Regular.ttf");
+   }
+ @font-face {
+     font-family: "Ubuntu";
+     src: url("../fonts/Ubuntu-Medium.ttf");
+     font-weight: 500;
+    }
+  @font-face {
+      font-family: "Ubuntu";
+      src: url("../fonts/Ubuntu-Bold.ttf");
+      font-weight: 700;
+     }

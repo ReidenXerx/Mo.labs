@@ -1,14 +1,15 @@
 @import "_colors.scss";
 @import "_fonts.scss";
 
-$roboto: 'Roboto', sans-serif;
-$neosans: "Neo Sans Pro", sans-serif;
-
+$ubuntu: 'Ubuntu', sans-serif;
+* {
+	z-index: 1;
+}
 html, body {
-	    font-family: $roboto;
+	    font-family: $ubuntu;
 			overflow-x: hidden;
 			width: 100vw;
-      background: #ffffff;
+      background: $black;
 
 			a {
 				text-decoration: none;
@@ -23,60 +24,72 @@ html, body {
 				list-style: none;
 			}
       h2, h3, h4 {
-        font-family: $neosans;
         font-weight: 500;
       }
-      p, h2, h3, h4  {
-        color: $black;
+      p, h2, h3, h4, li, a  {
+        color: $white;
       }
-      p {
-        @include SetFontLineSize(0.1, 0.1, 0.8, 14, 10);
-        letter-spacing: 1px;
+      p, li, a {
+        @include SetFontLineSize(0.1, 0.1, 0.8, 12, 10);
       }
       h2 {
-        //font-size: 48px;
-        text-transform: uppercase;
-        @include SetFontLineSize(0.2, 0.2, 0.6, 48, 8);
+        @include SetFontLineSize(0.3, 0.3, 0.4, 64, 8);
+				span.green {
+					color: $neon_green;
+				}
+				span.blue {
+					color: $neon_blue;
+				}
       }
+			.subtitle {
+				font-weight: 400;
+        @include SetFontLineSize(0.2, 0.2, 0.6, 30, 8);
+				color: $t_white;
+				span.green {
+					color: $t_neon_green;
+				}
+				span.blue {
+					color: $t_neon_blue;
+				}
+			}
       h3 {
-        //font-size: 18px;
-        @include SetFontLineSize(0.2, 0.2, 0.6, 18, 8);
-        color: #c1c1c1;
-        margin-bottom: 20px;
+        @include SetFontLineSize(0.2, 0.2, 0.6, 22, 8);
+				font-weight: 700;
       }
 }
+.co-de, .des-ign {
+	position: absolute;
+	z-index: 0;
+}
+.co-de {
+	width: RelativeUnits(267, 1, desktop-middle, horizontal);
+}
+.des-ign {
+	width: RelativeUnits(363, 1, desktop-middle, horizontal);
+}
 .button {
-  height: 50px;
-  width: 185px;
-  border-radius: 24px;
-  font-weight: 600;
+  height: RelativeUnits(64, 0.3, desktop-middle, horizontal);
+  width: RelativeUnits(228, 0.3, desktop-middle, horizontal);
+  border-radius: RelativeUnits(15, 0.3, desktop-middle, horizontal);
+  font-weight: 700;
   text-transform: uppercase;
   display: flex;
 	justify-content: center;
 	align-items: center;
-  background: $green;
-  color: $white;
-  font-size: 12px;
-  -webkit-box-shadow: 0px 0px 6px 3px rgba(75,255,179,0.21);
-  -moz-box-shadow: 0px 0px 6px 3px rgba(75,255,179,0.21);
-  box-shadow: 0px 0px 6px 3px rgba(75,255,179,0.21);
+  color: $black;
+	background: $neon_green;
+  @include SetFontLineSize(0.2, 0.2, 0.6, 21, 8);
+	&:hover {
+		background: $neon_blue;
+	}
 }
-.submit-message {
-	position: fixed;
-	right: 0;
-	top: 0;
-	padding: 20px 30px;
-	@include SetFontLineSize(0.2, 0.2, 0.6, 18, 8);
-	font-weight: 600;
-	font-family: $roboto;
-	background: $blue;
-	color: $white;
-	z-index: 9999999;
-	border-radius: 0 0 0 30px;
-	transition: 0;
+.section-content {
+	@include SetWidth-responsive(1160, 0.9);
+	min-width: 80%;
 }
-@import "header.scss"; // DONE
-////////////TEASER/////////////////////////////////////////////////////////////
-@import "teaser.scss"; //DONE
-//////////CONTACT//////////////////////////////////////////////////////////////
-@import "contact.scss"; // DONE
+
+@import "header.scss";
+@import "teaser.scss";
+@import "water.scss";
+@import "services.scss";
+@import "ecommerce.scss";

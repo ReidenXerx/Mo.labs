@@ -1,0 +1,7 @@
+.header {
+  background: $sovsem_black;
+  height: RelativeUnits(100, 0.5, desktop-middle, horizontal);
+  position: fixed;
+  width: 100vw;
+  z-index: 99;
+}
