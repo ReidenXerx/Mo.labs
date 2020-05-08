@@ -340,17 +340,16 @@
       </div>
     </section>
 
-
     <section id="contact" class="contact-section flex f-d-column a-i-center">
 
       <div class="title flex f-d-column">
         <div class="flex a-i-center">
-        <i class="fas fa-paper-plane"></i><h2>напишите</h2>
+        <h2>Давайте начнем.</h2>
         </div>
-        <h3>мы вам поможем</h3>
+        <h3>с 1 шага</h3>
       </div>
 
-      <form class="callback-form-custom flex f-d-column"
+      <form class="callback-form-custom flex f-d-column a-i-center"
       id="mailform" method="POST" enctype="multipart/form-data">
         <!-- Hidden Required Fields -->
           <input type="hidden" name="project_name" value="Site Name">
@@ -358,38 +357,23 @@
           <input type="hidden" name="form_subject" value="Form Subject">
           <!-- END Hidden Required Fields -->
 
-          <div class="input-box flex a-i-center">
-            <textarea rows="5" name="text" required="required" name="message" placeholder="Опишите Вашу проблему"></textarea>
-            <i class="fas fa-comment-alt"></i>
-          </div>
-
-          <div class="input-box flex  a-i-center">
+          <div class="input-box flex">
             <input type="text" id="email" name="email" required="required" placeholder="Введите ваш E-mail">
-            <i class="fas fa-envelope-square"></i>
           </div>
 
-          <div class="input-box flex  a-i-center">
+          <div class="input-box flex">
             <input type="text" id="phone" name="phone" required="required" placeholder="Введите ваш телефон">
-            <i class="fas fa-phone-square"></i>
           </div>
 
-          <div class="file-box flex j-c-s-between">
-            <!-- <input id="file-input" type="file" name="file" multiple>
-            <label for="file-input"><i class="fas fa-paperclip"></i></label> -->
-            <input type="date" id="date-input" min="2000-01-01" name="date">
-            <label for="date-input"><i class="fas fa-clock"></i></label>
-            <!-- <div class="clock"><i class="fas fa-clock"></i></div> -->
-            <select class="" name="selected">
-              <option value="all" disabled selected>Выберите способ консультации</option>
-      				<option value="по телефону">по телефону</option>
-              <option value="Telegram">Telegram</option>
-              <option value="Whatsapp">Whatsapp</option>
-            </select>
+          <div class="input-box flex">
+            <textarea rows="5" name="text" required="required" name="message" placeholder="Опишите Вашу проблему"></textarea>
           </div>
 
         <button type="submit" class="button">Oтправить</button>
 
       </form>
+
+      <div class="social-networks flex j-c-s-around"><i class="fab fa-instagram"></i><i class="fab fa-telegram-plane"></i><i class="fab fa-twitter"></i></div>
 
     </section>
 

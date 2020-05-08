@@ -1,0 +1,64 @@
+#contact {
+  padding-top: RelativeUnits(267, 0.3, desktop-middle, horizontal);
+  min-height: 100vh;
+
+  .callback-form-custom {
+      @include SetWidth-responsive(600, 0.6);
+  }
+
+  .title {
+    h2 {
+      margin-bottom: RelativeUnits(52, 0.3, desktop-middle, horizontal);
+    }
+
+    h3 {
+      margin-bottom: RelativeUnits(79, 0.3, desktop-middle, horizontal);
+      text-align: center;
+      color: $neon_green;
+    }
+  }
+
+  .input-box {
+    width: 100%;
+    input {
+      border: none;
+      background-color: $t_gray;
+      border-radius: 5px;
+      width: 100%;
+      color: $white;
+      margin-bottom: RelativeUnits(19, 0.3, desktop-middle, horizontal);
+      padding-bottom: RelativeUnits(15, 0.3, desktop-middle, horizontal);
+      padding-top: RelativeUnits(15, 0.3, desktop-middle, horizontal);
+      padding-left: RelativeUnits(25, 0.3, desktop-middle, horizontal);
+      padding-right: RelativeUnits(15, 0.3, desktop-middle, horizontal);
+    }
+    textarea {
+        border: none;
+        background-color: $t_gray;
+        border-radius: 5px;
+        width: 100%;
+        min-height: RelativeUnits(176, 0.3, desktop-middle, horizontal);
+        color: $white;
+        padding-bottom: RelativeUnits(15, 0.3, desktop-middle, horizontal);
+        padding-top: RelativeUnits(15, 0.3, desktop-middle, horizontal);
+        padding-left: RelativeUnits(25, 0.3, desktop-middle, horizontal);
+        padding-right: RelativeUnits(15, 0.3, desktop-middle, horizontal);
+    }
+  }
+
+  button {
+    border: none;
+    margin-top: RelativeUnits(91, 0.3, desktop-middle, horizontal);
+    margin-bottom: RelativeUnits(236, 0.3, desktop-middle, horizontal);
+  }
+
+  .social-networks {
+    @include SetFontLineSize(0.2, 0.2, 0.6, 40, 8);
+    padding-bottom: RelativeUnits(127, 0.3, desktop-middle, horizontal);
+    @include SetWidth-responsive(221, 0.3);
+    color: $t_gray-double;
+    :hover {
+      color: $neon_green;
+    }
+  }
+}
