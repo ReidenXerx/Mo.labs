@@ -29,7 +29,7 @@ html, body {
       p, h2, h3, h4, li, a  {
         color: $white;
       }
-      p, li, a {
+      p, li, a, input {
         @include SetFontLineSize(0.1, 0.1, 0.8, 12, 10);
       }
       h2 {
@@ -80,7 +80,7 @@ html, body {
 	background: $neon_green;
   @include SetFontLineSize(0.2, 0.2, 0.6, 21, 8);
 	&:hover {
-		background: $neon_blue;
+		background: $neon_green-active;
 	}
 }
 .section-content {
@@ -99,3 +99,4 @@ html, body {
 @import "garantee.scss";
 @import "code.scss";
 @import "slider.scss";
+@import "callback.scss";
