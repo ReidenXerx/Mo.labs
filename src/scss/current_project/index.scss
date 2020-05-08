@@ -33,7 +33,7 @@ html, body {
         @include SetFontLineSize(0.1, 0.1, 0.8, 12, 10);
       }
       h2 {
-        @include SetFontLineSize(0.3, 0.3, 0.4, 64, 8);
+        @include SetFontLineSize(0.35, 0.35, 0.3, 64, 8);
 				span.green {
 					color: $neon_green;
 				}
@@ -93,3 +93,9 @@ html, body {
 @import "water.scss";
 @import "services.scss";
 @import "ecommerce.scss";
+@import "roll.scss";
+@import "features.scss";
+@import "best.scss";
+@import "garantee.scss";
+@import "code.scss";
+@import "slider.scss";

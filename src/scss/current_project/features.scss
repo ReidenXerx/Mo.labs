@@ -1,0 +1,57 @@
+.features-section {
+  position: relative;
+  padding-top: RelativeUnits(215, 0.9, desktop-middle, horizontal);
+  .section-content {
+    .container {
+      width: 50%;
+    }
+    .with-text {
+      .item {
+        i {
+          color: $neon_green;
+            @include SetFontLineSize(0.2, 0.2, 0.6, 22, 8);
+            margin-right: RelativeUnits(20, 0.5, desktop-middle, horizontal);
+        }
+        h3 {
+          color: $neon_green;
+          margin-bottom: RelativeUnits(10, 0.3, desktop-middle, horizontal);
+        }
+        margin-bottom: RelativeUnits(30, 0.3, desktop-middle, horizontal);
+      }
+      .content {
+        @include SetWidth-responsive(435, 0.5);
+      }
+    }
+
+    @include _tablet-big {
+      flex-direction: column;
+      align-items: center;
+      .container {
+        width: 90%;
+        margin-bottom: RelativeUnits(30, 0.3, desktop-middle, horizontal);
+      }
+      .with-text {
+        .content {
+          width: 90%;
+        }
+      }
+    }
+  }
+  .reversed {
+    flex-direction: row-reverse;
+    @include _tablet-big {
+      flex-direction: column;
+    }
+    .item {
+      justify-content: flex-end;
+    }
+  }
+  .co-de {
+    top: 0;
+    left: 0;
+  }
+  .des-ign {
+    top: 0;
+    right: 0;
+  }
+}

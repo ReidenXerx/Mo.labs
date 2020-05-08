@@ -1,0 +1,21 @@
+.best-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  margin-top: RelativeUnits(300, 1, desktop-middle, horizontal);
+  margin-bottom: RelativeUnits(300, 1, desktop-middle, horizontal);
+  h2 {
+    @include SetFontLineSize(0.5, 0.5, 0.0, 300, 8);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $t2_neon_blue;
+    z-index: 0;
+  }
+  h3 {
+    position: absolute;
+    color: $neon_green;
+    font-weight: 400;
+  }
+}

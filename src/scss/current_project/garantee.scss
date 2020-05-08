@@ -1,0 +1,41 @@
+.garantee-section {
+  margin-bottom: RelativeUnits(370, 1, desktop-middle, horizontal);
+  h2 {
+    margin-bottom: RelativeUnits(180, 1, desktop-middle, horizontal);
+
+  }
+  .garants-array {
+    @include SetWidth-responsive(1180, 0.9);
+    max-width: 100vw;
+    justify-content: space-between;
+
+    .garant {
+      @include SetWidth-responsive(310, 0.5);
+      min-width: 250px;
+      margin: RelativeUnits(30, 0.5, desktop-middle, horizontal) auto;
+      padding: 0 RelativeUnits(30, 0.5, desktop-middle, horizontal);
+      p, h3 {
+        text-align: center;
+      }
+      h3 {
+        color: $neon_green;
+        margin-bottom: RelativeUnits(20, 0.3, desktop-middle, horizontal);
+        white-space: nowrap;
+      }
+      .icon-wrap {
+        width: RelativeUnits(57, 0.3, desktop-middle, horizontal);
+        height: RelativeUnits(57, 0.3, desktop-middle, horizontal);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: RelativeUnits(5, 0.3, desktop-middle, horizontal);
+        background: $neon_green;
+        margin-top: RelativeUnits(35, 0.3, desktop-middle, horizontal);
+        i {
+          font-size: RelativeUnits(22, 0.3, desktop-middle, horizontal);
+          color: $black;
+        }
+      }
+    }
+  }
+}

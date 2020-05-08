@@ -1,0 +1,14 @@
+.code-section {
+  height: RelativeUnits(240, 0.5, desktop-middle, horizontal);
+  position: relative;
+  .wrap {
+    @include SetWidth-responsive(722, 0.75);
+  }
+  .arrow {
+    position: absolute;
+    bottom: 0;
+    left: 35%;
+    width: RelativeUnits(15, 0.5, desktop-middle, horizontal);
+
+  }
+}

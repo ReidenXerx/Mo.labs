@@ -5,7 +5,9 @@
 
     .ecommerce {
       @include SetWidth-responsive(600, 0.9);
-      min-width: 250px;
+      @include _tablet-middle {
+        min-width: 80vw;
+      }
       margin: 0 RelativeUnits(30, 0.5, desktop-middle, horizontal);
       margin-bottom: RelativeUnits(140, 0.8, desktop-middle, horizontal);
       padding-top: RelativeUnits(80, 0.8, desktop-middle, horizontal);
@@ -15,6 +17,9 @@
 
       .text {
         @include SetWidth-responsive(435, 0.8);
+        @include _tablet-middle {
+          min-width: 70vw;
+        }
         h3 {
           margin-bottom: RelativeUnits(10, 0.8, desktop-middle, horizontal);
         }

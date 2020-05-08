@@ -1,0 +1,7 @@
+.slider-section {
+
+  .container {
+    @include SetWidth-responsive(975, 0.9);
+    
+  }
+}
