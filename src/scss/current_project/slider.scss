@@ -1,7 +1,77 @@
 .slider-section {
-
+  margin-top: RelativeUnits(100, 1, desktop-middle, horizontal);
   .container {
     @include SetWidth-responsive(975, 0.9);
-    
+    text-align: right;
+    width: fit-content;
+
+    .title {
+      @include SetWidth-responsive(570, 0.7);
+      margin-bottom: RelativeUnits(200, 1, desktop-middle, horizontal);
+    }
+    #slider {
+      @include SetWidth-responsive(560, 0.7);
+      overflow: hidden;
+
+      ul {
+        min-width: 300%;
+      }
+      .frame {
+
+        background: $t_white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: RelativeUnits(20, 0.7, desktop-middle, horizontal);
+        height: RelativeUnits(280, 0.7, desktop-middle, horizontal);
+        .wrap {
+          width: calc(100% - 10px);
+          height: calc(100% - 10px);
+          overflow: hidden;
+          img {
+            width: auto;
+            height: 100%;
+          }
+        }
+      }
+      .item, .frame {
+        @include SetWidth-responsive(560, 0.7);
+      }
+      .name {
+        margin: 0 auto;
+        text-align: right;
+        @include SetWidth-responsive(267, 0.7);
+        .subtitle {
+          @include SetFontLineSize(0.1, 0.1, 0.8, 14, 8);
+          color: $t_white;
+        }
+      }
+    }
+
+    .indicators {
+      margin-top: RelativeUnits(85, 0.7, desktop-middle, horizontal);
+      .circle {
+        width: 7px;
+        height: 7px;
+        border-radius: 2px;
+        background: $white;
+        margin: 0 RelativeUnits(10, 0.3, desktop-middle, horizontal);
+      }
+      .green {
+        background: $neon_blue;
+      }
+    }
+  }
+}
+.control-wrap {
+  display: flex;
+  align-items: center;
+  height: RelativeUnits(280, 0.7, desktop-middle, horizontal);
+  @include SetWidth-responsive(190, 0.8);
+  @include _tablet-small {
+    @include SetWidth-responsive(25, 0);
+  }
+  i {
+    color: $neon_green;
   }
 }

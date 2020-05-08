@@ -4,7 +4,7 @@ export default function Carousel(){
 
   jQuery(document).ready(function (jQuery) {
 
-    var offset = jQuery('.item').width();
+    var offset = jQuery('li.item').width();
     var i = 0;
     var slides = 2; // 3 - 1
 
