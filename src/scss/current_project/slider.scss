@@ -40,6 +40,9 @@
       .name {
         margin: 0 auto;
         text-align: right;
+        h3 {
+          @include SetFontLineSize(0.4, 0.4, 0.2, 22, 8);
+        }
         @include SetWidth-responsive(267, 0.7);
         .subtitle {
           @include SetFontLineSize(0.1, 0.1, 0.8, 14, 8);
@@ -73,5 +76,6 @@
   }
   i {
     color: $neon_green;
+    cursor: pointer;
   }
 }

@@ -1,0 +1,38 @@
+#slogan {
+  background-color: $neon_green;
+  padding-top: RelativeUnits(180, 0.3, desktop-middle, horizontal);
+  padding-bottom: RelativeUnits(186, 0.3, desktop-middle, horizontal);
+  margin-top: RelativeUnits(383, 0.3, desktop-middle, horizontal);
+
+  h2 {
+    color: $t_black;
+    text-align: center;
+  }
+
+  i {
+    text-align: center;
+    margin-bottom: RelativeUnits(137, 0.3, desktop-middle, horizontal);
+  }
+
+  .slogan-text {
+    @include SetWidth-responsive(1143, 0.7);
+    h4 {
+      border-radius: 5px;
+      //position: absolute;
+      width: 100%;
+      background-color: $black;
+      color: $neon_green;
+      @include SetFontLineSize(0.4, 0.6, 0.0, 44, 0);
+      padding-left: RelativeUnits(18, 0.3, desktop-middle, horizontal);
+      padding-right: RelativeUnits(18, 0.3, desktop-middle, horizontal);
+      padding-top: RelativeUnits(5, 0.3, desktop-middle, horizontal);
+      padding-bottom: RelativeUnits(12, 0.3, desktop-middle, horizontal);
+    }
+    h3 {
+      position: relative;
+      color: $black;
+      align-self: flex-end;
+      padding-top: RelativeUnits(10, 0.3, desktop-middle, horizontal);
+    }
+  }
+}
