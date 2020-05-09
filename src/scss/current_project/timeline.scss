@@ -1,0 +1,59 @@
+.timeline-section {
+  margin-top:  RelativeUnits(450, 1, desktop-middle, horizontal);
+
+	.timeline {
+		display: grid;
+		grid-template-columns: RelativeUnits(600, 0.95, desktop-middle, horizontal)
+    RelativeUnits(50, 0.1, desktop-middle, horizontal)
+    RelativeUnits(600, 0.95, desktop-middle, horizontal);
+    padding: RelativeUnits(200, 1, desktop-middle, horizontal) 0;
+
+		.sector {
+			padding: RelativeUnits(50, 0.5, desktop-middle, horizontal) 0;
+      h3 {
+        margin-bottom: RelativeUnits(20, 0.4, desktop-middle, horizontal);
+        line-height: 26px;
+        span.b-square, span.g-square {
+          padding: RelativeUnits(10, 0.4, desktop-middle, horizontal)
+          RelativeUnits(8, 0.4, desktop-middle, horizontal);
+          border-radius: RelativeUnits(4, 0.1, desktop-middle, horizontal);
+          color: $black;
+        }
+        span.b-square {
+          background: $neon_blue;
+        }
+        span.g-square {
+          background: $neon_green;
+        }
+      }
+		}
+		.left {
+			margin-right: RelativeUnits(80, 1, desktop-middle, horizontal);
+			text-align: right;
+		}
+		.right {
+			margin-left: RelativeUnits(80, 1, desktop-middle, horizontal);
+			text-align: left;
+		}
+
+		.line-sector {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+
+			.line {
+				width: 2px;
+				height: 100%;
+				background-color: $t_gray-double;
+			}
+      .square {
+        min-width: RelativeUnits(12, 0.5, desktop-middle, horizontal);
+        min-height: RelativeUnits(12, 0.5, desktop-middle, horizontal);
+        border-radius: RelativeUnits(3, 0.5, desktop-middle, horizontal);
+        background: $neon_blue;
+      }
+
+		}
+	}
+}

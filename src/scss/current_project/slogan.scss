@@ -1,21 +1,20 @@
 #slogan {
   background-color: $neon_green;
-  padding-top: RelativeUnits(180, 0.3, desktop-middle, horizontal);
-  padding-bottom: RelativeUnits(186, 0.3, desktop-middle, horizontal);
-  margin-top: RelativeUnits(383, 0.3, desktop-middle, horizontal);
-
+  min-height: RelativeUnits(700, 0.8, desktop-middle, horizontal);
+  position: relative;
   h2 {
+    @include SetFontLineSize(0.1, 0.9, 0.0, 400, -40);
+    font-weight: 700;
+    text-transform: uppercase;
     color: $t_black;
-    text-align: center;
-  }
-
-  i {
-    text-align: center;
-    margin-bottom: RelativeUnits(137, 0.3, desktop-middle, horizontal);
+    z-index: 0;
   }
 
   .slogan-text {
     @include SetWidth-responsive(1143, 0.7);
+    max-width: 80vw;
+    position: absolute;
+    margin-top: RelativeUnits(50, 0.2, desktop-middle, horizontal);
     h4 {
       border-radius: 5px;
       //position: absolute;

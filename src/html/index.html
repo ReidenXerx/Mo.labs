@@ -14,7 +14,19 @@
 
   <body>
 
-    <header class="header flex j-c-center">
+    <header class="header flex a-i-center j-c-s-between">
+      <div class="logo-wrap">
+        <a href="#teaser" id="list"><img src="img/logo.svg" alt=""></a>
+      </div>
+      <ul class="flex j-c-s-between" id="menu">
+        <li><a href="#teaser" id="list">главная</a></li>
+        <li><a href="#services" id="list">почему мы</a></li>
+        <li><a href="#ecommerce" id="list">гарантии</a></li>
+        <li><a href="#features1" id="list">features</a></li>
+        <li><a href="#contact" id="list">связаться с нами</a></li>
+      </ul>
+      <i class="fas fa-bars hamburger"></i>
+
     </header>
 
     <section id="teaser" class="teaser-section flex j-c-center">
@@ -27,7 +39,7 @@
             <li><div class="square"></div>android/iOS app</li>
             <li><div class="square"></div>ecommerce</li>
           </ul>
-          <a href="#" class="button">интересно</a>
+          <a href="#services" class="button" id="list">интересно</a>
         </div>
         <div class="container with-image"></div>
       </div>
@@ -292,7 +304,10 @@
               <li class="item" id="1">
                 <div class="frame">
                   <div class="wrap">
-                    <img src="img/image 1.png" alt="">
+                    <a href="img/image 1.png" data-lightbox="gal">
+                      <img src="img/image 1.png" alt="">
+                    </a>
+
                   </div>
                 </div>
                 <div class="name">
@@ -303,7 +318,9 @@
               <li class="item" id="2">
                 <div class="frame">
                   <div class="wrap">
-                    <img src="img/image 1.png" alt="">
+                    <a href="img/image 1.png" data-lightbox="gal">
+                      <img src="img/image 1.png" alt="">
+                    </a>
                   </div>
                 </div>
                 <div class="name">
@@ -314,7 +331,9 @@
               <li class="item" id="3">
                 <div class="frame">
                   <div class="wrap">
-                    <img src="img/image 1.png" alt="">
+                    <a href="img/image 1.png" data-lightbox="gal">
+                      <img src="img/image 1.png" alt="">
+                    </a>
                   </div>
                 </div>
                 <div class="name">
@@ -340,19 +359,92 @@
       </div>
     </section>
 
+    <section id="timeline" class="timeline-section flex f-d-column a-i-center">
+      <div class="title">
+        <h2 class="subtitle">не знаете с чего начать?</h2>
+        <h2>Мы вам <span class="green">поможем.</span></h2>
+      </div>
+      <div class="timeline">
+        <!-- 1 -->
+        <div class="sector left"></div>
+
+        <div class="line-sector">
+          <div class="line"></div>
+          <div class="square"></div>
+          <div class="line"></div>
+        </div>
+
+        <div class="sector right">
+          <h3><span class="g-square">Вы</span> пишете нам</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod ornare nisl, non suscipit nulla varius at. In dolor ante, bibendum ut augue iaculis, auctor efficitur justo. Donec at metus congue, auctor mi aliquet, dignissim </p>
+        </div>
+        <!-- 2 -->
+        <div class="sector left">
+          <h3><span class="b-square">Мы</span> помогаем разработать Вашу идею</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod ornare nisl, non suscipit nulla varius at. In dolor ante, bibendum ut augue iaculis, auctor efficitur justo. Donec at metus congue, auctor mi aliquet, dignissim </p>
+        </div>
+
+        <div class="line-sector">
+          <div class="line"></div>
+          <div class="square"></div>
+          <div class="line"></div>
+        </div>
+
+        <div class="sector right"></div>
+        <!-- 3 -->
+        <div class="sector left"></div>
+
+        <div class="line-sector">
+          <div class="line"></div>
+          <div class="square"></div>
+          <div class="line"></div>
+        </div>
+
+        <div class="sector right">
+          <h3><span class="b-square">Мы</span> начинаем разработку Вашего проекта</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod ornare nisl, non suscipit nulla varius at. In dolor ante, bibendum ut augue iaculis, auctor efficitur justo. Donec at metus congue, auctor mi aliquet, dignissim </p>
+        </div>
+        <!-- 4 -->
+        <div class="sector left">
+          <h3><span class="b-square">Мы</span> демонстрируем Вам готовый проект</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod ornare nisl, non suscipit nulla varius at. In dolor ante, bibendum ut augue iaculis, auctor efficitur justo. Donec at metus congue, auctor mi aliquet, dignissim </p>
+        </div>
+
+        <div class="line-sector">
+          <div class="line"></div>
+          <div class="square"></div>
+          <div class="line"></div>
+        </div>
+
+        <div class="sector right"></div>
+        <!-- 5 -->
+        <div class="sector left"></div>
+
+        <div class="line-sector">
+          <div class="line"></div>
+          <div class="square"></div>
+          <div class="line"></div>
+        </div>
+
+        <div class="sector right">
+          <h3><span class="g-square">Вы</span> оплачиваете проект</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod ornare nisl, non suscipit nulla varius at. In dolor ante, bibendum ut augue iaculis, auctor efficitur justo. Donec at metus congue, auctor mi aliquet, dignissim </p>
+        </div>
+
+      </div>
+    </section>
+
     <section id="twosteps" class="best-section">
       <h2>2</h2>
       <h3><span>Сделайте всего</span> 2 шага</h3>
     </section>
 
-    <section id="slogan" class="slogan-section best-section flex f-d-column">
+    <section id="slogan" class="slogan-section flex f-d-column j-c-center a-i-center">
+      <i class="fas fa-star"></i>
       <h2>slogan</h2>
-      <div class="container flex f-d-column">
-        <i class="fas fa-star"></i>
-        <div class="slogan-text flex f-d-column a-i-center">
-          <h4>"Разве есть в жизни что-либо более прекрасное, чем поиск ответов на вопросы?"</h4>
-          <h3>-Айзек Азимов</h3>
-        </div>
+      <div class="slogan-text flex f-d-column a-i-center">
+        <h4>"Разве есть в жизни что-либо более прекрасное, чем поиск ответов на вопросы?"</h4>
+        <h3>-Айзек Азимов</h3>
       </div>
     </section>
 
@@ -374,7 +466,7 @@
           <!-- END Hidden Required Fields -->
 
           <div class="input-box flex">
-            <input type="text" id="email" name="email" required="required" placeholder="Введите ваш E-mail">
+            <input type="email" id="email" name="email" required="required" placeholder="Введите ваш E-mail">
           </div>
 
           <div class="input-box flex">

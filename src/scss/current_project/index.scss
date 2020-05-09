@@ -1,5 +1,7 @@
 @import "_colors.scss";
 @import "_fonts.scss";
+//@import '/node_modules/.../lightbox.min.css';
+@import "lightbox.scss";
 
 $ubuntu: 'Ubuntu', sans-serif;
 * {
@@ -29,9 +31,13 @@ html, body {
       p, h2, h3, h4, li, a  {
         color: $white;
       }
-      p, li, a, input {
+      p, li, a, input, textarea {
         @include SetFontLineSize(0.1, 0.1, 0.8, 12, 10);
       }
+			textarea {
+				font-family: $ubuntu;
+				resize: none;
+			}
       h2 {
         @include SetFontLineSize(0.35, 0.35, 0.3, 64, 8);
 				span.green {
@@ -87,6 +93,20 @@ html, body {
 	@include SetWidth-responsive(1160, 0.9);
 	min-width: 80%;
 }
+.submit-message {
+	position: fixed;
+	right: 0;
+	top: 33%;
+	padding: 20px 30px;
+	@include SetFontLineSize(0.2, 0.2, 0.6, 18, 8);
+	font-weight: 600;
+	background: $neon_green;
+	color: $white;
+	z-index: 9999999;
+	border-radius: 30px 0  0 30px;
+	transition: 0;
+	//display: none;
+}
 
 @import "header.scss";
 @import "teaser.scss";
@@ -102,3 +122,4 @@ html, body {
 @import "callback.scss";
 @import "slogan.scss";
 @import "twosteps.scss";
+@import "timeline.scss";
