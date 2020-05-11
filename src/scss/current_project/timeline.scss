@@ -6,6 +6,21 @@
 		grid-template-columns: RelativeUnits(600, 0.95, desktop-middle, horizontal)
     RelativeUnits(50, 0.1, desktop-middle, horizontal)
     RelativeUnits(600, 0.95, desktop-middle, horizontal);
+    grid-template-areas:
+    'l-1 line-1 r-1'
+    'l-2 line-2 r-2'
+    'l-3 line-3 r-3'
+    'l-4 line-4 r-4'
+    'l-5 line-5 r-5';
+    @include _tablet-small {
+      grid-template-columns: RelativeUnits(50, 0.1, desktop-middle, horizontal) RelativeUnits(600, 0.7, desktop-middle, horizontal);
+      grid-template-areas:
+      'line-1 r-1'
+      'line-2 l-2'
+      'line-3 r-3'
+      'line-4 l-4'
+      'line-5 r-5';
+    }
     padding: RelativeUnits(200, 1, desktop-middle, horizontal) 0;
 
 		.sector {
@@ -36,24 +51,46 @@
 			text-align: left;
 		}
 
-		.line-sector {
+    @include _tablet-small {
+      .left, .right {
+        text-align: left;
+        margin: 0;
+      }
+    }
+
+		.line-sector-1, .line-sector-2, .line-sector-3, .line-sector-4, .line-sector-5 {
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			flex-direction: column;
 
-			.line {
-				width: 2px;
-				height: 100%;
-				background-color: $t_gray-double;
-			}
+  			.line {
+  				width: 2px;
+  				height: 100%;
+  				background-color: $t_gray-double;
+  			}
+      }
       .square {
         min-width: RelativeUnits(12, 0.5, desktop-middle, horizontal);
         min-height: RelativeUnits(12, 0.5, desktop-middle, horizontal);
         border-radius: RelativeUnits(3, 0.5, desktop-middle, horizontal);
         background: $neon_blue;
       }
+      @for $i from 1 to 6 {
+        .line-sector-#{$i} {
+          grid-area: line-#{$i};
+        }
+      }
+
+      @for $i from 1 to 6 {
+        .l-#{$i} {
+          grid-area: l-#{$i};
+        }
+        @debug l-#{$i};
+        .r-#{$i} {
+          grid-area: r-#{$i};
+        }
+      }
 
 		}
 	}
-}
