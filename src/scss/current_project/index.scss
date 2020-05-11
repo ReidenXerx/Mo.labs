@@ -84,7 +84,7 @@ html, body {
 	align-items: center;
   color: $black;
 	background: $neon_green;
-  @include SetFontLineSize(0.2, 0.2, 0.6, 21, 8);
+  @include SetFontLineSize(0.2, 0.2, 0.6, 16, 8);
 	&:hover {
 		background: $neon_green-active;
 	}
