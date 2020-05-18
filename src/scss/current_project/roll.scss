@@ -9,8 +9,8 @@
   .rolls {
     margin-left: RelativeUnits(200, 1, desktop-middle, horizontal);
     .wrap {
-      @include SetWidth-responsive(79, 0.5);
-      margin-left: RelativeUnits(20, 0.3, desktop-middle, horizontal);
+      @include SetWidth-responsive(120, 0.5);
+      margin-left: RelativeUnits(30, 0.3, desktop-middle, horizontal);
     }
   }
 }
