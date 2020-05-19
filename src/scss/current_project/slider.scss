@@ -60,7 +60,7 @@
         background: $white;
         margin: 0 RelativeUnits(10, 0.3, desktop-middle, horizontal);
       }
-      .green {
+      .green, .active {
         background: $neon_blue;
       }
     }

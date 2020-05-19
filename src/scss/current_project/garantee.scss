@@ -17,6 +17,9 @@
       p, h3 {
         text-align: center;
       }
+      p {
+        margin-bottom: RelativeUnits(35, 0.3, desktop-middle, horizontal);
+      }
       h3 {
         color: $neon_green;
         margin-bottom: RelativeUnits(20, 0.3, desktop-middle, horizontal);
@@ -30,7 +33,7 @@
         align-items: center;
         border-radius: RelativeUnits(5, 0.3, desktop-middle, horizontal);
         background: $neon_green;
-        margin-top: RelativeUnits(35, 0.3, desktop-middle, horizontal);
+        margin-top: auto;
         i {
           font-size: RelativeUnits(22, 0.3, desktop-middle, horizontal);
           color: $black;

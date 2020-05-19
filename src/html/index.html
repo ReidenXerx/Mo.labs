@@ -47,7 +47,7 @@
             <li><div class="square"></div>android/iOS app</li>
             <li><div class="square"></div>ecommerce</li>
           </ul>
-          <a href="#services" class="button" id="list">интересно</a>
+          <a href="#services" class="button glimmer" id="list">интересно</a>
         </div>
         <div class="container with-image"></div>
       </div>
@@ -87,7 +87,7 @@
               <li><div class="square"></div>ecommerce</li>
             </ul>
             <div class="price">
-              от <span class="general"><span class="big">100</span> руб</span>
+              от <span class="general glimmer2"><span class="big">100</span> руб</span>
             </div>
           </div>
 
@@ -101,7 +101,7 @@
               <li><div class="square"></div>design</li>
             </ul>
             <div class="price">
-              от <span class="general"><span class="big">100</span> руб</span>
+              от <span class="general glimmer"><span class="big">100</span> руб</span>
             </div>
           </div>
 
@@ -115,7 +115,7 @@
               <li><div class="square"></div>SMM strategy development</li>
             </ul>
             <div class="price">
-              от <span class="general"><span class="big">100</span> руб</span>
+              от <span class="general glimmer2"><span class="big">100</span> руб</span>
             </div>
           </div>
 
@@ -130,7 +130,7 @@
       <div class="ecommerce-array flex j-c-center wrap">
 
           <div class="ecommerce">
-            <i class="fas fa-store-alt"></i>
+            <i class="fas fa-store-alt c-glimmer"></i>
             <h2 class="number">1</h2>
             <div class="text">
               <h3>Никаких павильонов</h3>
@@ -139,7 +139,7 @@
           </div>
 
           <div class="ecommerce">
-            <i class="fas fa-donate"></i>
+            <i class="fas fa-donate c-glimmer2"></i>
             <h2 class="number">2</h2>
             <div class="text">
               <h3>Минимум издержек</h3>
@@ -148,7 +148,7 @@
           </div>
 
           <div class="ecommerce">
-            <i class="fas fa-user"></i>
+            <i class="fas fa-user c-glimmer"></i>
             <h2 class="number">3</h2>
             <div class="text">
               <h3>Не нужен персонал</h3>
@@ -157,7 +157,7 @@
           </div>
 
           <div class="ecommerce">
-            <i class="fas fa-map-marker-alt"></i>
+            <i class="fas fa-map-marker-alt c-glimmer2"></i>
             <h2 class="number">4</h2>
             <div class="text">
               <h3>Не важно где</h3>
@@ -172,9 +172,18 @@
     <section id="roll" class="roll-section flex f-d-column a-i-center">
       <h3>Roll your ideas.</h3>
       <div class="rolls flex">
-        <div class="wrap"><img src="img/45deg.png" alt=""></div>
-        <div class="wrap"><img src="img/60deg.png" alt=""></div>
-        <div class="wrap"><img src="img/90deg.png" alt=""></div>
+        <div class="roll">
+          <p>45°</p>
+          <div class="wrap 45deg"><img src="img/45deg_notext.svg" alt=""></div>
+        </div>
+        <div class="roll">
+          <p>60°</p>
+          <div class="wrap 60deg"><img src="img/60deg_notext.svg" alt=""></div>
+        </div>
+        <div class="roll">
+          <p>90°</p>
+          <div class="wrap 90deg"><img src="img/90deg_notext.svg" alt=""></div>
+        </div>
       </div>
     </section>
 
@@ -268,7 +277,7 @@
         <div class="garant flex f-d-column a-i-center">
           <h3>Бесплатную консультацию</h3>
           <p>В любом деле главное — начать! Просто позвоните нам или оставьте заявку на сайте. Переходите к действию — наши консультанты помогут разобраться в тонкостях работы веб-студии, переведут мысли, идеи и пожелания в конкретные требования. Поможем воплотить мечты в реальность!</p>
-          <div class="icon-wrap">
+          <div class="icon-wrap glimmer">
             <i class="fas fa-gift"></i>
           </div>
         </div>
@@ -276,7 +285,7 @@
         <div class="garant flex f-d-column a-i-center">
           <h3>Отсутствие предоплаты</h3>
           <p>С нами Вы всегда можете оставаться спокойными! Четко рассчитанная стоимость проекта, грамотно сформированное коммерческое предложение, подробная смета всех финансовых затрат и никаких предоплат! Платите только за выполненную работу!</p>
-          <div class="icon-wrap">
+          <div class="icon-wrap glimmer2">
             <i class="fas fa-handshake"></i>
           </div>
         </div>
@@ -284,7 +293,7 @@
         <div class="garant flex f-d-column a-i-center">
           <h3>Индивидуальный подход</h3>
           <p>Мы решаем конкретные бизнес-задачи. Перед разработкой сайтов наши специалисты уделяют особое внимание сбору информации о клиенте и его ЦА. Все этапы работы, стратегия действия, сроки выполнения оговариваются с заказчиком. Вы получите сайт, максимально соответствующий вашим пожеланиям!</p>
-          <div class="icon-wrap">
+          <div class="icon-wrap glimmer">
             <i class="fas fa-star"></i>
           </div>
         </div>
@@ -308,7 +317,7 @@
             <i class="fas fa-chevron-left control_prev"></i>
           </div>
           <div id="slider">
-            <ul class="flex">
+            <ul class="flex owl-carousel" id="photos-carousel">
               <li class="item" id="1">
                 <div class="frame">
                   <div class="wrap">
@@ -356,9 +365,9 @@
           </div>
         </div>
 
-        <div class="carousel-nav indicators flex j-c-center a-i-center">
+        <div class="carousel-nav indicators flex j-c-center a-i-center" id="photos-dots">
 
-          <div class="circle green" id="c1"></div>
+          <div class="circle active" id="c1"></div>
           <div class="circle" id="c2"></div>
           <div class="circle" id="c3"></div>
 
@@ -479,7 +488,7 @@
             <textarea rows="5" name="text" required="required" name="message" placeholder="Опишите Вашу проблему"></textarea>
           </div>
 
-        <button type="submit" class="button">Oтправить</button>
+        <button type="submit" class="button glimmer">Oтправить</button>
 
       </form>
 

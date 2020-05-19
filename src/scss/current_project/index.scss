@@ -1,7 +1,7 @@
 @import "_colors.scss";
 @import "_fonts.scss";
-//@import '/node_modules/.../lightbox.min.css';
 @import "lightbox.scss";
+@import 'node_modules/owl.carousel/src/scss/owl.carousel.scss';
 
 $ubuntu: 'Ubuntu', sans-serif;
 * {
@@ -106,6 +106,52 @@ html, body {
 	border-radius: 30px 0  0 30px;
 	transition: 0;
 	//display: none;
+}
+
+@keyframes glimmer {
+  from { background: $neon_green-inactive }
+  to { background: lighten($neon_green-inactive, 25%); }
+}
+@keyframes glimmer2 {
+  from { background: $neon_green }
+  to { background: $neon_green-active }
+}
+
+@keyframes c-glimmer {
+  from { color: $neon_green-inactive }
+  to { color: lighten($neon_green-inactive, 25%); }
+}
+@keyframes c-glimmer2 {
+  from { color: $neon_green }
+  to { color: $neon_green-active }
+}
+
+.glimmer {
+	animation: 2.5s infinite alternate glimmer;
+	&:hover {
+		animation: 1.5s infinite alternate glimmer2;
+	}
+}
+.glimmer2 {
+	animation: 2.5s infinite alternate glimmer;
+	animation-delay: -1s;
+	&:hover {
+		animation: 1.5s infinite alternate glimmer2;
+	}
+}
+
+.c-glimmer {
+	animation: 2.5s infinite alternate c-glimmer;
+	&:hover {
+		animation: 1.5s infinite alternate c-glimmer2;
+	}
+}
+.c-glimmer2 {
+	animation: 2.5s infinite alternate c-glimmer;
+	animation-delay: -1s;
+	&:hover {
+		animation: 1.5s infinite alternate c-glimmer2;
+	}
 }
 
 @import "header.scss";

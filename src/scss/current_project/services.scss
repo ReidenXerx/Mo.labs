@@ -8,6 +8,8 @@
         margin: 0 RelativeUnits(50, 0.5, desktop-middle, horizontal);
         margin-bottom: RelativeUnits(140, 0.8, desktop-middle, horizontal);
         min-width: 250px;
+        display: flex;
+        flex-direction: column;
         h3 {
           margin-bottom: RelativeUnits(20, 1, desktop-middle, horizontal);
         }
@@ -24,9 +26,12 @@
           border-radius: 2px;
           margin-right: RelativeUnits(11, 0.1, desktop-middle, horizontal);
         }
+        ul {
+          margin-bottom: RelativeUnits(40, 0.4, desktop-middle, horizontal);
+        }
         .price {
           @include SetFontLineSize(0.1, 0.1, 0.8, 20, 0);
-          margin-top: RelativeUnits(40, 0.4, desktop-middle, horizontal);
+          margin-top: auto;
           color: $neon_blue;
           span.general {
             background: $neon_green;
