@@ -12,6 +12,7 @@ $(document).ready(function(){
   var photos = $('#photos-carousel')
   photos.owlCarousel({
     loop: false,
+    rewind: true,
     items: 1,
     dotsContainer: '#photos-dots'
   })
