@@ -11,7 +11,7 @@ Animations();
 $(document).ready(function(){
   var photos = $('#photos-carousel')
   photos.owlCarousel({
-    loop: true,
+    loop: false,
     items: 1,
     dotsContainer: '#photos-dots'
   })
