@@ -3,6 +3,7 @@ import Mail from './mail.js';
 import lightbox from 'lightbox2';
 import Animations from './anima-config.js';
 import 'owl.carousel';
+import Typed from 'typed.js';
 
 Header();
 Mail();
@@ -30,3 +31,11 @@ $(document).ready(function(){
       'resizeDuration': 0
   })
 });
+
+var options = {
+  strings: ["<span class=\"red\">&lt;h2&gt;</span>we are<span class=\"red\">&lt;span</span> <span class=\"blue\">style = </span><span class=\"gray\">“color: <span class=\"color\">#5BDCDA</span> ”</span><span class=\"red\">&gt;</span>awesome.<span class=\"red\">&lt;span&gt;&lt;h2&gt;</span>"],
+  typeSpeed: 80,
+  loop: true
+};
+
+var typed = new Typed('#typed-output', options);

@@ -3,6 +3,28 @@
   position: relative;
   .wrap {
     @include SetWidth-responsive(722, 0.75);
+    p.typed {
+      font-family: $ubuntu-mono;
+      @include SetFontLineSize(0.15, 0.15, 0.7, 22, 10);
+      color: $white;
+      display: inline;
+      span.red {
+        color: #D83483;
+      }
+      span.blue {
+        color: #429FDA;
+      }
+      span.gray {
+        color: #C4C4C4;
+      }
+      span.color {
+        color: $sovsem_black;
+        background: $neon_green;
+        padding: 5px;
+        border-radius: 3px;
+        font-weight: 700;
+      }
+    }
   }
   .arrow {
     position: absolute;
@@ -11,4 +33,9 @@
     width: RelativeUnits(15, 0.5, desktop-middle, horizontal);
 
   }
+}
+.typed-cursor {
+  color: $white;
+  @include SetFontLineSize(0.15, 0.15, 0.7, 22, 10);
+  font-weight: 700;
 }
