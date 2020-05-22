@@ -109,19 +109,23 @@ export default function Animations() {
 
   var typing = false;
   $(window).scroll(function() {
-    if (detect("#slider-section") && typing == false) {
+    if (detect("slider-section") && typing == false) {
       typing = true;
+      console.log("type")
       var typed = new Typed('#typed-output', options);
+
     }
   });
 
   function detect(elem) {
-    var b_top = $(elem).offset().top;
-    var b_bot = $(elem).offset().top + $(elem).height();
-    var hght = $(window).height();
-    var current = $(window).scrollTop();
-    if (current > b_top - hght && current < b_bot) return true;
-    else return false;
+    var found = document.getElementById(elem)
+    if(found === null) return false
+    var b_top = found.offsetTop
+    var b_bot = found.offsetTop + found.offsetHeight
+    var hght = document.documentElement.clientHeight
+    var current = window.pageYOffset
+    if (current > b_top - hght && current < b_bot) return true
+    else return false
   }
 
 }

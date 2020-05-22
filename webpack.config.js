@@ -90,6 +90,14 @@ module.exports = {
       {
         from: './src/img',
         to: './img'
+      },
+      {
+        from: './src/vid',
+        to: './vid'
+      },
+      {
+        from: './src/php',
+        to: './'
       }
     ]),
   ].concat(htmlPlugins)

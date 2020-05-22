@@ -12,7 +12,7 @@ export default function Mail() {
 			jQuery.ajax({
 				type: "POST",
 				url: "/mail.php",
-				contentType: "application/json; charset=utf-8", 
+				//contentType: "application/json; charset=utf-8", 
 				data: th.serialize()
 			}).done(function() {
 				jQuery(".submit-message").show();

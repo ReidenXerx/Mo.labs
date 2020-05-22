@@ -154,6 +154,28 @@ html, body {
 		animation: 1.5s infinite alternate c-glimmer2;
 	}
 }
+.preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 999;
+	background: $black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	.wrap {
+		@include SetWidth-responsive(200, 0.5);
+	}
+	h3 {
+		color: $neon_green;
+		font-weight: 700;
+	}
+
+}
 
 @import "header.scss";
 @import "teaser.scss";
