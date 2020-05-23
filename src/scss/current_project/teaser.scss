@@ -26,6 +26,8 @@
       img {
         width: 90%;
       }
+      display: flex;
+      justify-content: center;
     }
     .with-text {
       padding-left: RelativeUnits(150, 0.7, desktop-middle, horizontal);
