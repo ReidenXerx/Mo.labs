@@ -2,11 +2,20 @@ import jQuery from 'jquery';
 
 export default function Header() {
 
-  if(jQuery(document).width() <= 650) jQuery("#menu").hide();
+  var breakpoint = document.getElementById('menu').dataset.breakpoint
+  if(breakpoint === undefined) breakpoint = 1170
+
+  window.addEventListener("resize", () =>{
+    if(jQuery(document).width() <= breakpoint) jQuery("#menu").hide();
+    else jQuery("#menu").show();
+  });
+
 
   jQuery(document).ready(function() {
 
-    if(jQuery(document).width() <= 650) jQuery(".menu").hide();
+    if(jQuery(document).width() <= breakpoint) jQuery("#menu").hide();
+    else jQuery("#menu").show();
+    console.log(breakpoint)
 
     jQuery("body").on("click", "#list", function (event) { //scroll
       event.preventDefault();
