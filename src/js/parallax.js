@@ -4,7 +4,7 @@ function parallax(event) {
     var top = viewportOffset.top
     var h = document.documentElement.clientHeight
     element.style.color = "rgba(91, 220, 218, "+(h - top)/3000+")"
-    console.log(top, h, (top - h)/1000)
+    //console.log(top, h, (top - h)/1000)
   })
 
 }

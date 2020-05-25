@@ -6,16 +6,16 @@ export default function Header() {
   if(breakpoint === undefined) breakpoint = 1170
 
   window.addEventListener("resize", () =>{
-    if(jQuery(document).width() <= breakpoint) jQuery("#menu").hide();
+    if(window.screen.width <= breakpoint) jQuery("#menu").hide();
     else jQuery("#menu").show();
+    //console.log(breakpoint, window.screen.width)
   });
-
 
   jQuery(document).ready(function() {
 
-    if(jQuery(document).width() <= breakpoint) jQuery("#menu").hide();
+    if(window.screen.width <= breakpoint) jQuery("#menu").hide();
     else jQuery("#menu").show();
-    console.log(breakpoint)
+    //console.log(breakpoint, window.screen.width)
 
     jQuery("body").on("click", "#list", function (event) { //scroll
       event.preventDefault();
