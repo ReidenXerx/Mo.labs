@@ -53,15 +53,16 @@
   }
 
   .social-networks {
-    @include SetFontLineSize(0.2, 0.2, 0.6, 40, 8);
+
     padding-bottom: RelativeUnits(127, 0.3, desktop-middle, horizontal);
-    @include SetWidth-responsive(221, 0.3);
+    @include SetWidth-responsive(301, 0.5);
     color: $t_gray-double;
     :hover {
       color: $neon_green;
     }
     i {
       cursor: pointer;
+      @include SetFontLineSize(0.2, 0.2, 0.6, 40, 8);
     }
   }
 }
