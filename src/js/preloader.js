@@ -9,7 +9,7 @@ document.getElementById('preloadertext').innerHTML = selectedtext
 window.onload = function() {
   setTimeout(() => {
     document.getElementById('preloader').style.display = "none"
-  }, 4000)
+  }, 2000)
 }
 
 function getRandomInt(max) {

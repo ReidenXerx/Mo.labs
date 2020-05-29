@@ -29,8 +29,8 @@
           height: calc(100% - 10px);
           overflow: hidden;
           img {
-            width: auto;
-            height: 100%;
+            height: auto;
+            width: 100%;
           }
         }
       }
@@ -39,7 +39,7 @@
       }
       .name {
         margin: 0 auto;
-        text-align: right;
+        text-align: center;
         h3 {
           @include SetFontLineSize(0.4, 0.4, 0.2, 22, 8);
         }
