@@ -1,0 +1,66 @@
+#blog {
+  height: 100vh;
+  margin: 0;
+  .arrow {
+    position: absolute;
+    width: RelativeUnits(300, 0.8, desktop-middle, horizontal);
+    bottom: 10%;
+    left: 50vw;
+  }
+}
+.posts {
+  padding-top: RelativeUnits(140, 0.8, desktop-middle, horizontal);
+  padding-bottom: RelativeUnits(140, 0.8, desktop-middle, horizontal);
+
+  .post {
+
+    margin-bottom: RelativeUnits(140, 0.8, desktop-middle, horizontal);
+
+    @include SetWidth-responsive(858, 0.8);
+
+    .p-text {
+      padding-top: RelativeUnits(10, 0.8, desktop-middle, horizontal);
+    }
+
+    .first {
+      text-transform: uppercase;
+      color: $white;
+    }
+    .second {
+      text-transform: uppercase;
+      color: $neon_green;
+    }
+
+    .date {
+      color: $neon_green;
+      width: fit-content;
+      i {
+        margin-right: RelativeUnits(7, 0.8, desktop-middle, horizontal);
+      }
+    }
+
+    .more {
+      cursor: pointer;
+      p {
+        color: $neon_green;
+      }
+      img {
+        height: RelativeUnits(7, 0.2, desktop-middle, horizontal);
+        width: auto;
+        padding-left: RelativeUnits(7, 0.8, desktop-middle, horizontal);
+      }
+    }
+
+    .container {
+      padding-top: RelativeUnits(7, 0.8, desktop-middle, horizontal);
+    }
+
+  }
+}
+
+#final {
+  padding-bottom: RelativeUnits(200, 0.8, desktop-middle, horizontal);
+  .subtitle {
+    margin-bottom: RelativeUnits(50, 0.8, desktop-middle, horizontal);
+  }
+}
