@@ -21,7 +21,38 @@ function generateHtmlPlugins(templateDir) {
 
 const htmlPlugins = generateHtmlPlugins('./src/html');
 
-module.exports = {
+// var config = {
+//     // TODO: Add common Configuration
+//     module: {},
+// };
+//
+// var indexConfig = Object.assign({}, config, {
+//     name: "index",
+//     entry: [
+//       './src/js/index.js',
+//       './src/scss/main.scss'
+//     ],
+//     output: {
+//        filename: "./js/bundle.js"
+//     },
+// });
+// var blogConfig = Object.assign({}, config, {
+//     name: "blog",
+//     entry: [
+//       './src/js/blog.js',
+//       './src/scss/main.scss'
+//     ],
+//     output: {
+//        filename: "./js/bundle-blog.js"
+//     },
+// });
+//
+// // Return Array of Configurations
+// module.exports = [
+//     fooConfig, barConfig,
+// ];
+
+module.exports = [{
   entry: [
     './src/js/index.js',
     './src/scss/main.scss'
@@ -101,9 +132,85 @@ module.exports = {
       }
     ]),
   ].concat(htmlPlugins)
-  // resolve: {
-  //   alias: {
-  //     'vue$': 'vue/dist/vue.esm.js' // 'vue/dist/vue.common.js' for webpack 1
-  //   }
-  // }
-};
+},
+{
+  entry: [
+    './src/js/blog.js',
+    './src/scss/main.scss'
+  ],
+  output: {
+    filename: './js/bundle-blog.js'
+  },
+  devtool: "source-map",
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        include: path.resolve(__dirname, 'src/js'),
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: 'env'
+          }
+        }
+      },
+      {
+        test: /\.(sass|scss)$/,
+        include: path.resolve(__dirname, 'src/scss'),
+        use: ExtractTextPlugin.extract({
+          use: [{
+              loader: "css-loader",
+              options: {
+                sourceMap: true,
+                url: false
+              }
+            },
+            {
+              loader: "sass-loader",
+              options: {
+                sourceMap: true
+              }
+            }
+          ]
+        })
+      },
+      {
+        test: /\.html$/,
+        include: path.resolve(__dirname, 'src/html'),
+        use: ['raw-loader']
+      },
+    ]
+  },
+  plugins: [
+    new ExtractTextPlugin({
+      filename: './css/style.bundle.css',
+      allChunks: true,
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
+    }),
+    new CopyWebpackPlugin([{
+        from: './src/fonts',
+        to: './fonts'
+      },
+      {
+        from: './src/favicon',
+        to: './favicon'
+      },
+      {
+        from: './src/img',
+        to: './img'
+      },
+      {
+        from: './src/vid',
+        to: './vid'
+      },
+      {
+        from: './src/php',
+        to: './'
+      }
+    ]),
+  ].concat(htmlPlugins)
+}];

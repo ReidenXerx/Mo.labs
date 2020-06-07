@@ -1,3 +1,23 @@
+.blog-header {
+  h4, i {
+    font-size: RelativeUnits(15, 0.3, desktop-middle, horizontal);
+    font-weight: 700;
+    color: $white;
+    text-transform: uppercase;
+  }
+  .order-wrap {
+    display: flex;
+    align-items: center;
+    h4, i {
+      color: $neon_green;
+      &:hover { color: $neon_green-active; }
+    }
+    h4 {
+      margin-right: 20px;
+    }
+  }
+}
+
 #blog {
   height: 100vh;
   margin: 0;
@@ -20,6 +40,9 @@
 
     .p-text {
       padding-top: RelativeUnits(10, 0.8, desktop-middle, horizontal);
+      .hidden {
+        display: none;
+      }
     }
 
     .first {
